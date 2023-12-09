@@ -1,7 +1,44 @@
-<mat-card style="background-color: rgba(51, 170, 51, .1)">
-    <mat-card-title>Login</mat-card-title>
-    <mat-card-content>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+<title>Login Form</title>
+
+<section class="login-section">
+
+    <div class="loginform">
+        <div class="login-left">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
+                <h2>Login</h2>
+                <div class="inputs">
+                    <img src="./assets/image/user.ico" alt="" class="icon icon-user">
+                    <input type="email" matInput placeholder="Email" formControlName="email" name="email">
+                </div>
+                <div class="inputs">
+                    <img src="./assets/image/password.ico" alt="" class="icon icon-password">
+                    <input type="password" placeholder="Password" matInput  formControlName="password" name="password"
+                    [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"[attr.aria-pressed]="hide">
+                        <mat-icon> {{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </div>
+
+                <button class="btn" mat-raised-button color="primary" [disabled]="!loginForm.valid">Login Now</button>
+
+            </form>
+
+            <h3> <a href="" style="padding-left: 8px;" color="warn" routerLink="../forgot-password">Reset Password</a></h3>
+           
+        </div>
+        <div class="login-right">
+            <div class="glass-right">
+                <img src="./assets/image/contact1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="upper-circle"></div>
+        <div class="lower-circle"></div>
+    </div>
+</section>
+
+<!--div class="carte">
+        <form >
             <div>
                 <mat-form-field>
                     <input type="text" matInput placeholder="Email" formControlName="email" name="email">
@@ -11,13 +48,12 @@
             </div>
 
             <div>
-                <mat-icon>lock_open</mat-icon> &nbsp;&nbsp;&nbsp;
+                <mat-icon class="icolock">lock_open</mat-icon> &nbsp;&nbsp;&nbsp;
                 <mat-form-field>
                     <input type="password" matInput placeholder="Password" formControlName="password" name="password"
                         [type]="hide ? 'password' : 'text'">
                     <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is required</mat-error>
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                        [attr.aria-pressed]="hide">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"[attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
                 </mat-form-field>
@@ -29,6 +65,5 @@
             </div>
 
         </form>
-    </mat-card-content>
-</mat-card>
-    
+    </div-->
+   
