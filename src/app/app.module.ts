@@ -16,6 +16,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatFormFieldModule, MatInputModule, MatButtonModule, 
+    MatFormFieldModule, MatInputModule, MatButtonModule,MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],
