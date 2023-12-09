@@ -5,6 +5,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
     password: new FormControl(''),
   });
   constructor(private auth: AuthService, private router: Router) {}
-
+ 
   ngOnInit(): void {
     if (this.auth.isLoggedIn()) {
       this.router.navigate(['admin']);
