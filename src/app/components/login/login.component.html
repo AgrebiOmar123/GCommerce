@@ -1,0 +1,45 @@
+<div class="container vh-100">
+    <div style="width: 30%;" class="row justify-content-center h-100">
+        
+            
+                <div class="text-center">
+                    <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+                </div>
+                <div class="text-center">
+                    <h2>Welcome</h2>
+                </div>
+                <p style="color: lightslategray; text-align: center;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please enter your login
+                    details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="containerpwd">
+                        <mat-icon class="my-icon">lock_open</mat-icon>&nbsp;&nbsp;&nbsp;
+                        <mat-form-field class="FromPswd">
+                            <mat-label>Enter your password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" class="password" placeholder="Password" class="form-control"
+                             formControlName="password" name="password">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                      </mat-form-field>
+                    </div>
+                    
+                    <!--div class="form-group">
+                        <input type="email" id="email" placeholder="Email" class="form-control" formControlName="email"
+                            name="email" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" class="form-control"
+                            formControlName="password" name="password" />
+                    </div-->
+                   
+                    <input type="submit" class="btn btn-primary w-100" value="Login" name="">
+                </form>
+            </div>
+            <div class="card-footer text-right">
+                <small><a routerLink="../forgot-password">Forgot Password</a></small>
+            </div>
+        
+  
+    <div class="containerImg"><img src="src\assets\images\imaglogin.png"></div>
+</div>
