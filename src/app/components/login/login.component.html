@@ -42,29 +42,39 @@
         <img src="./assets/image/bg.svg">
     </div>
     <div class="login-content">
-        <form action="index.html">
+        <form form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
             <img src="./assets/image/avatar.svg">
             <h2 class="title">Welcome</h2>
-               <div class="input-div one">
-                  <div class="i">
-                          <i class="fas fa-user"></i>
-                  </div>
-                  <div class="div">
-                          <h5>Username</h5>
-                          <input type="text" class="input">
-                  </div>
-               </div>
-               <div class="input-div pass">
-                  <div class="i"> 
-                       <i class="fas fa-lock"></i>
-                  </div>
-                  <div class="div">
-                       <h5>Password</h5>
-                       <input type="password" class="input">
-               </div>
+            <div class="input-div one">
+                <div class="i">
+                    <!--i class="fas fa-user"></i-->
+                    <mat-icon class="ico">email</mat-icon>
+                </div>
+                <div class="div">
+
+                    <input type="email" matInput formControlName="email" name="email" class="input">
+                </div>
             </div>
+            <div class="input-div pass">
+                <div class="i">
+                    <!--i class="fas fa-lock"></i-->
+                    <mat-icon class="ico">lock_open</mat-icon>
+                </div>
+                <div class="div">
+
+
+                    <input type="password" matInput formControlName="password" name="password" class="input"
+                        [type]="hide ? 'password' : 'text'" />
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon> {{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </div>
+
+            </div>
+
             <a href="#">Forgot Password?</a>
-            <input type="submit" class="btn" value="Login">
+            <input type="submit" class="btn" value="Login" class="btn" mat-raised-button color="primary"
+                [disabled]="!loginForm.valid">
         </form>
     </div>
-</div>
