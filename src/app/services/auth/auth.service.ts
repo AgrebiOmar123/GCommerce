@@ -30,7 +30,6 @@ export class AuthService {
     if (email === 'admin@gmail.com' && password === 'admin123') {
       this.setToken('abcdefghijklmnopqrstuvwxyz');
       alert("connected");
-      
       return of({ name: 'Tarique Akhtar', email: 'admin@gmail.com' });
     }
     return throwError(new Error('Failed to login'));
