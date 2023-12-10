@@ -1,7 +1,7 @@
-<title>Login Form</title>
+<!--title>Login Form</title>
 
-<section class="login-section">
 
+<div>
     <div class="loginform">
         <div class="login-left">
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
@@ -32,38 +32,39 @@
             </div>
         </div>
 
-        <div class="upper-circle"></div>
-        <div class="lower-circle"></div>
+       
+        
     </div>
-</section>
-
-<!--div class="carte">
-        <form >
-            <div>
-                <mat-form-field>
-                    <input type="text" matInput placeholder="Email" formControlName="email" name="email">
-                    <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Email is required</mat-error>
-                    <mat-error *ngIf="loginForm.get('username')?.hasError('email')">Please enter valid email</mat-error>
-                </mat-form-field>
+</div-->
+<img class="wave" src="./assets/image/wave.png">
+<div class="container">
+    <div class="img">
+        <img src="./assets/image/bg.svg">
+    </div>
+    <div class="login-content">
+        <form action="index.html">
+            <img src="./assets/image/avatar.svg">
+            <h2 class="title">Welcome</h2>
+               <div class="input-div one">
+                  <div class="i">
+                          <i class="fas fa-user"></i>
+                  </div>
+                  <div class="div">
+                          <h5>Username</h5>
+                          <input type="text" class="input">
+                  </div>
+               </div>
+               <div class="input-div pass">
+                  <div class="i"> 
+                       <i class="fas fa-lock"></i>
+                  </div>
+                  <div class="div">
+                       <h5>Password</h5>
+                       <input type="password" class="input">
+               </div>
             </div>
-
-            <div>
-                <mat-icon class="icolock">lock_open</mat-icon> &nbsp;&nbsp;&nbsp;
-                <mat-form-field>
-                    <input type="password" matInput placeholder="Password" formControlName="password" name="password"
-                        [type]="hide ? 'password' : 'text'">
-                    <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is required</mat-error>
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"[attr.aria-pressed]="hide">
-                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
-                </mat-form-field>
-            </div>
-
-            <div class="button">
-                <button type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
-                <a href="" style="padding-left: 8px;" color="warn" routerLink="../forgot-password">Reset Password</a>
-            </div>
-
+            <a href="#">Forgot Password?</a>
+            <input type="submit" class="btn" value="Login">
         </form>
-    </div-->
-   
+    </div>
+</div>
