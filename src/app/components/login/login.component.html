@@ -45,7 +45,8 @@
 
                 <!-------------      image     ------------->
 
-                <img class="imgright" src="./assets/image/pexels-dominika-roseclay-905163.jpg" width="500px" height="200px" alt="">
+                <img class="imgright" src="./assets/image/pexels-dominika-roseclay-905163.jpg" width="500px"
+                    height="200px" alt="">
                 <div class="text">
                     <p>Join platform <br><i>- Acomerco -</i></p>
                 </div>
@@ -53,35 +54,39 @@
             </div>
             <div class="col-md-6 right">
 
-                
+
                 <div class="input-box">
                     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" autocomplete="off">
-                        <!--img style=" display: flex;justify-content: center;align-items: center;position: relative;"
-                         src="./assets/image/logo21.png" width="100px" height="100px"-->
-                        <header>S'authentifier</header>
+                        <div class="blokim">
+                            <img style=" display: flex;justify-content: center;align-items: center;position: relative;"
+                                src="./assets/image/logo_icon.png" width="50" height="50px">
+                                <br>
+                            <header>S'authentifier</header>
+                        </div>
                         <div class="input-field">
-                            
-                            <input class="input" id="email" required="" autocomplete="on"
-                            type="email" matInput  formControlName="email" name="email">
+
+                            <input class="input" id="email" required="" autocomplete="on" type="email" matInput
+                                formControlName="email" name="email">
 
                             <label for="email">Adress mail: </label>
 
                         </div>
                         <div class="input-field">
-                            <input type="password" class="input" id="pass" required="" input  matInput 
-                             formControlName="password" name="password"[type]="hide ? 'password' : 'text'">
+                            <input type="password" class="input" id="pass" required="" input matInput
+                                formControlName="password" name="password" [type]="hide ? 'password' : 'text'">
                             <label for="pass">Mot de pass :</label>
-                            
+
                         </div>
                         <div class="input-field">
 
-                            <input type="submit" class="submit" value="Connecter"
-                           mat-raised-button color="primary" [disabled]="!loginForm.valid">
+                            <input type="submit" class="submit" value="Connecter" mat-raised-button color="primary"
+                                [disabled]="!loginForm.valid">
                         </div>
                     </form>
                     <div class="signin">
-                        <span>Oublier mot de pass? <a href="#" style="padding-left: 8px;" color="warn" routerLink="../forgot-password">Click ici ...</a></span>
-                       
+                        <span>Oublier mot de pass? <a href="#" style="padding-left: 8px;" color="warn"
+                                routerLink="../forgot-password">Click ici ...</a></span>
+
                     </div>
                 </div>
 
