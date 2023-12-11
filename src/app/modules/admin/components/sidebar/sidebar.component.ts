@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import  {MatIconModule} from '@angular/material/icon'
+
+import { AuthService } from './../../../../services/auth/auth.service';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -9,9 +10,11 @@ import  {MatIconModule} from '@angular/material/icon'
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
   }
-  
+  logout(): void {
+    this.auth.logout();
+  }
 }

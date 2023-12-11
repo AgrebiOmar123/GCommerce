@@ -1,4 +1,4 @@
-import { AuthService } from './../../../../services/auth/auth.service';
+
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,12 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   private sidebarVisible: boolean = false;
-  constructor(private auth: AuthService) {}
+  constructor() {}
 
   ngOnInit(): void {}
-  logout(): void {
-    this.auth.logout();
-  }
+  
   sidebarToggle() {
     const body = document.getElementsByTagName('body')[0];
 
