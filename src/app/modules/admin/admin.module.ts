@@ -9,9 +9,13 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
 import { AboutComponent } from './components/about/about.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
-  declarations: [AdminDashboardComponent, HeaderComponent, FooterComponent, HomeComponent, ContactComponent, ServicesComponent, AboutComponent],
-  imports: [CommonModule, AdminRoutingModule],
+  declarations: [AdminDashboardComponent, HeaderComponent, FooterComponent, HomeComponent, 
+    ContactComponent, ServicesComponent, AboutComponent, SidebarComponent],
+  imports: [CommonModule, AdminRoutingModule,
+  MatIconModule],
 })
 export class AdminModule {}
