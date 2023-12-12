@@ -12,16 +12,16 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  
   sidebarToggle() {
     const body = document.getElementsByTagName('body')[0];
 
     if (!this.sidebarVisible) {
-      body.classList.add('nav-open');
+      body.classList.add('side-nav');
       this.sidebarVisible = true;
     } else {
       this.sidebarVisible = false;
-      body.classList.remove('nav-open');
+      body.classList.remove('side-nav');
     }
   }
+  
 }

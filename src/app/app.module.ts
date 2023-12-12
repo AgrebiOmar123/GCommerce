@@ -11,12 +11,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Importation de angular material packages
-import {MatIconModule} from '@angular/material/icon';
 
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -34,8 +29,7 @@ import {MatCardModule} from '@angular/material/card';
     NgbModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatFormFieldModule, MatInputModule, MatButtonModule,MatCardModule,
+  
     
   ],
   providers: [],
